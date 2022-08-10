@@ -1,32 +1,21 @@
 <script setup>
-import { ref } from 'vue'
-
 defineProps({
   msg: String
 })
-
 </script>
 
 <template>
-  <div>
-    <nav id="nav" class="bg-gray-800 fixed w-screen z-50">
-      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex-shrink-0 flex items-center">
-              <img class="block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow">
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div class="flex bg-gray-800 h-screen">
-      <div class="m-auto">
-        <h1 class="text-white font-bold xl:text-9xl lg:text-8xl md:text-6xl text-5xl">{{msg}}</h1>
-      </div>
+  <div class="snap-start xl:w-4/6 w-5/6">
+    <div class="h-screen flex items-center sm:w-4/6 w-5/6">
+      <h1 class="text-white font-bold lg:text-8xl md:text-6xl text-5xl relative -top-20">{{ msg }}</h1>
     </div>
+    <a href="#projects" class="absolute sm:w-4/6 w-5/6 text-white font-bold md:bottom-10 bottom-20">
+      <p><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+          xmlns="http://www.w3.org/2000/svg" class="stroke-2 inline-block h-5 w-5">
+          <g>
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </g>
+        </svg> projects </p>
+    </a>
   </div>
 </template>
-
-<style scoped>
-</style>

@@ -1,6 +1,6 @@
 # Portfolio
 
-This is the source code for my portfolio website, written from scratch in Vue.
+This is the source code for my portfolio website, written from scratch in Vue and tailwindcss.
 
 # Installation
 

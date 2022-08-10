@@ -8,33 +8,42 @@ defineProps({
     buttonColor: String,
     buttonHover: String,
     link: String,
-    icons: Array
+    icons: Array,
+    image: String,
 })
 </script>
 
 <template>
     <div id="smallCard"
-        class="containter my-2.5 mx-0 flex flex-wrap content-between lg:w-3/6 w-full p-12 border-b bg-white rounded-xl font-sans text-left snap-start scroll-m-16">
+        class="containter my-2.5 mx-0 flex flex-wrap content-between xl:w-4/6 w-5/6 p-12 border-b bg-white rounded-xl font-sans text-left snap-start scroll-m-16">
         <div class="mb-2">
             <h2 :class="textColor" class="font-normal pb-2 md:text-2xl sm:text-xl text-lg">{{ subtitle }}</h2>
             <span class="inline-flex items-baseline mb-6">
                 <h1 class="font-extrabold md:text-3xl sm:text-2xl text-xl">{{ title }}</h1>
                 <h2 class="pl-2 font-bold text-gray-500 md:text-md sm:text-sm text-xs">{{ date }}</h2>
             </span>
-            <div class="col-span-3 text-gray-600 relative">
-                <p class="">{{ description }}</p>
+            <div class="flex flex-wrap">
+                <div v-if="image" class="text-gray-600 relative sm:w-4/6 w-full sm:pr-5 pr-0 pb-5">
+                    <p class="">{{ description }}</p>
+                </div>
+                <div v-else class="text-gray-600 relative w-full pr-0">
+                    <p class="">{{ description }}</p>
+                </div>
+                <div v-if="image" class="relative inline-grid sm:w-2/6 w-full pb-5">
+                    <img :src="image"  class="rounded-2xl h-full w-full shadow">
+                </div>
             </div>
         </div>
         <div class="w-full flex flex-wrap items-center">
-            <div class="lg:w-full sm:w-4/6 w-full relative my-2">
+            <div class="sm:w-4/6 w-full relative my-2">
                 <div class="bottom-0 left-0 text-sm font-medium py-2 inline-flex items-center">
-                    <p class="h-full pr-4 xl:block lg:hidden md:block hidden">BUILT WITH</p>
+                    <p class="h-full pr-4 md:block hidden">BUILT WITH</p>
                     <span v-for="(icon, index) in icons" v-bind:key="index" class="pr-2">
                         <img class="rounded-lg shadow p-1 h-10 w-10" :src="icon">
                     </span>
                 </div>
             </div>
-            <div class="lg:w-full sm:w-2/6 w-full relative items-center my-2">
+            <div class="sm:w-2/6 w-full relative items-center my-2">
                 <a :href="link" target="_blank">
                     <button type="button" :class="buttonColor + ' hover:' + buttonHover"
                         class="shadow w-full rounded-lg text-white font-medium transition-colors duration-150 cursor-pointer inline-flex items-center justify-center flex-row px-5 py-2">

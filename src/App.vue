@@ -3,15 +3,12 @@ import FullHeader from './components/FullHeader.vue'
 import Navbar from './components/Navbar.vue'
 import SmallHeader from './components/SmallHeader.vue'
 import ProjectB from './components/ProjectB.vue'
-import ProjectA from './components/ProjectA.vue'
 import About from './components/About.vue'
 import Contact from './components/Contact.vue'
 import ContactCard from './components/ContactCard.vue'
 import ProjectGrid from './components/ProjectGrid.vue'
 import Footer from './components/Footer.vue'
-import imgUrl1 from './assets/vwi.png'
 import imgUrl2 from './assets/01v.png'
-import imgUrl3 from './assets/coetools.png'
 import vue from './assets/icons/vue.svg' 
 import php from './assets/icons/php-alt.svg' 
 import bootstrap from './assets/icons/bootstrap.svg' 
@@ -22,12 +19,11 @@ import express from './assets/icons/express.svg'
 import node from './assets/icons/nodejs-icon.svg' 
 import jquery from './assets/icons/jquery-icon.svg'
 import SmallProject from './components/SmallProject.vue'
+import LargeProject from './components/LargeProject.vue'
 import mongo from './assets/icons/mongodb-icon.svg' 
 import elastic from './assets/icons/elasticsearch.svg' 
 import handlebars from './assets/icons/handlebars.svg' 
-import c from './assets/icons/c.svg' 
 import cplusplus from './assets/icons/c-plusplus.svg' 
-import opengl from './assets/icons/opengl.svg' 
 import puppeteer from './assets/icons/puppeteer.svg' 
 var opencl = "https://upload.wikimedia.org/wikipedia/commons/b/b8/OpenCL.jpg"; 
 
@@ -59,9 +55,10 @@ var about =
   <Navbar title="Carter Roeser" linkTitle="Blog" link="https://blog.cjroeser.com" />
   <div class="flex flex-col items-center">
     <FullHeader msg="Carter Roeser"/>
-    <ProjectA id="projects" title="Vesta Web Interface" subtitle="Hosting Control Panel" link="https://vwi.cdgtech.one" description="PHP interface for VestaCP, providing a modern, customizable control panel featuring plugins, integrations and branding necessary for any web host. VWI has thousands of downloads and has been claimed by many customers to be an essential piece of any Vesta system." date="2017" :icons="[php, bootstrap, mysql, jquery]" textColor="text-indigo-400" buttonColor="bg-indigo-500" hoverColor="bg-indigo-600" />
-    <ProjectB title="01V Web Controller" subtitle="Remote Mixer" date="2020" link="https://github.com/cdgco/01v-web-controller" description="Multi-device real time remote controller for Yamaha 01V digital mixer. Portable Web App that allows multiple devices to wirelessly mix sound on a 26-year-old mixer." :image=imgUrl2 :icons="[node, express, electron, socketio]"  textColor="text-red-400" buttonColor="bg-red-500" hoverColor="bg-red-600" />
-    <ProjectA title="COE Tools" subtitle="IT Tool Management" date="2021" link="https://github.com/cdgco/coetools" description="Dynamic tool management system for IT departments. Features an LDAP authenticated role system with users and admins, a customizable interface with light / dark mode and a drag-and-drop editor, favorite tools and tool history, tool search, sorting and categorization and embedded tool support." :icons="[php, bootstrap, mysql, jquery]" textColor="text-orange-400" buttonColor="bg-orange-500" hoverColor="bg-orange-600"  />
+    <LargeProject title="Vesta Web Interface" subtitle="Hosting Control Panel" date="2017" textColor="text-indigo-400" buttonColor="bg-indigo-500" buttonHover="bg-indigo-600" link="https://vwi.cdgtech.one" :icons="[php, bootstrap, mysql, jquery]" description="PHP interface for VestaCP, providing a modern, customizable control panel featuring plugins, integrations and branding necessary for any web host. VWI has thousands of downloads and has been claimed by many customers to be an essential piece of any Vesta system."/>
+    <LargeProject title="01V Web Controller" subtitle="Remote Mixer" date="2020" textColor="text-red-400" buttonColor="bg-red-500" buttonHover="bg-red-600" link="https://github.com/cdgco/01v-web-controller" :image="imgUrl2" :icons="[node, express, electron, socketio]" description="Multi-device real time remote controller for Yamaha 01V digital mixer. Portable Web App that allows multiple devices to wirelessly mix sound on a 26-year-old mixer."/>
+    <LargeProject title="COE Tools" subtitle="IT Tool Management" date="2021" textColor="text-orange-400" buttonColor="bg-orange-500" buttonHover="bg-orange-600" link="https://github.com/cdgco/coetools" :icons="[php, bootstrap, mysql, jquery]" description="Dynamic tool management system for IT departments. Features an LDAP authenticated role system with users and admins, a customizable interface with light / dark mode and a drag-and-drop editor, favorite tools and tool history, tool search, sorting and categorization and embedded tool support."/>
+    
     <ProjectGrid>
       <SmallProject title="SmartAssets" subtitle="Modern Asset Management" date="2022" textColor="text-blue-400" buttonColor="bg-blue-500" buttonHover="bg-blue-600" link="https://github.com/cdgco/SmartAssets" :icons="[node, vue, express, mongo, elastic]" description="SmartAssets is an API first asset management system, built for IT professionals with integration and expansion in mind. It features native barcode support, label printing, a built in barcode scanner, and much more."/>
       <SmallProject title="SmartLists" subtitle="Music Visualization Platform" date="2022" textColor="text-green-400" buttonColor="bg-green-500" buttonHover="bg-green-600" link="https://github.com/cdgco/smartlists" :icons="[node, handlebars, express, mongo]" description="SmartLists is a music visualization platform that allows users to view the metadata from their Spotify playlists through a range of interactive 2D, 3D, and AI generated graphs and art."/>

@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-    <nav id="nav" class="sticky top-0 z-50 opacity-0">
+    <nav id="nav" class="sticky top-0 z-50 opacity-0 snap-start">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">

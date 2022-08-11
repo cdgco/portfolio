@@ -13,8 +13,8 @@ defineProps({
 </script>
 
 <template>
-    <div id="smallCard"
-        class="containter my-2.5 mx-0 flex flex-wrap content-between lg:w-3/6 w-full p-12 border-b bg-white rounded-xl font-sans text-left snap-start scroll-m-16">
+    <div
+        class="smallCard containter my-2.5 mx-0 flex flex-wrap content-between lg:w-3/6 w-full p-12 border-b bg-white rounded-xl font-sans text-left snap-start scroll-m-16">
         <div class="mb-2">
             <h2 :class="textColor" class="font-normal pb-2 md:text-2xl sm:text-xl text-lg">{{ subtitle }}</h2>
             <span class="inline-flex items-baseline mb-6">

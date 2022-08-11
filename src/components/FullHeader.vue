@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="snap-start xl:w-4/6 w-5/6">
+  <div class="xl:w-4/6 w-5/6">
     <div class="h-screen flex items-center sm:w-4/6 w-5/6">
       <h1 class="text-white font-bold lg:text-8xl md:text-6xl text-5xl relative -top-20">{{ msg }}</h1>
     </div>

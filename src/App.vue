@@ -54,7 +54,7 @@ var about =
 <template>
   <Navbar title="Carter Roeser" linkTitle="Blog" link="https://blog.cjroeser.com" />
   <div class="flex flex-col items-center">
-    <FullHeader msg="Carter Roeser"/>
+    <FullHeader msg="Carter Roeser" linkTitle="blog" link="https://blog.cjroeser.com"/>
     <LargeProject id="projects" title="Vesta Web Interface" subtitle="Hosting Control Panel" date="2017" textColor="text-indigo-400" buttonColor="bg-indigo-500" buttonHover="bg-indigo-600" link="https://vwi.cdgtech.one" :icons="[php, bootstrap, mysql, jquery]" description="PHP interface for VestaCP, providing a modern, customizable control panel featuring plugins, integrations and branding necessary for any web host. VWI has thousands of downloads and has been claimed by many customers to be an essential piece of any Vesta system."/>
     <LargeProject title="01V Web Controller" subtitle="Remote Mixer" date="2020" textColor="text-red-400" buttonColor="bg-red-500" buttonHover="bg-red-600" link="https://github.com/cdgco/01v-web-controller" :image="imgUrl2" :icons="[node, express, electron, socketio]" description="Multi-device real time remote controller for Yamaha 01V digital mixer. Portable Web App that allows multiple devices to wirelessly mix sound on a 26-year-old mixer."/>
     <LargeProject title="COE Tools" subtitle="IT Tool Management" date="2021" textColor="text-orange-400" buttonColor="bg-orange-500" buttonHover="bg-orange-600" link="https://github.com/cdgco/coetools" :icons="[php, bootstrap, mysql, jquery]" description="Dynamic tool management system for IT departments. Features an LDAP authenticated role system with users and admins, a customizable interface with light / dark mode and a drag-and-drop editor, favorite tools and tool history, tool search, sorting and categorization and embedded tool support."/>
@@ -89,6 +89,14 @@ export default {
           console.log("fade in")
         } else if (scroll == 0 && $("#nav").css("opacity") != 0) {
           $("#nav").fadeTo(500, 0)
+          console.log("fade out")
+        }
+
+        if (scroll > 0 && $("#blogLink").css("opacity") == 1) {
+          $("#blogLink").fadeTo(500, 0)
+          console.log("fade in")
+        } else if (scroll == 0 && $("#blogLink").css("opacity") != 1) {
+          $("#blogLink").fadeTo(500, 1)
           console.log("fade out")
         }
       }).scroll();

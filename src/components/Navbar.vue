@@ -16,7 +16,7 @@ defineProps({
                     </div>
                 </div>
                 <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <a href="{{link}}" target="_blank"
+                    <a :href="link" target="_blank"
                         class="text-white inline-flex hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                         {{ linkTitle }}
                         <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-linejoin="round"
